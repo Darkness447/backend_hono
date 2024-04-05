@@ -1,9 +1,6 @@
 import { Hono } from 'hono'
+import app from './learn'
 
-const app = new Hono()
 
-app.get('/', (c) => {
-  return c.text('Hello Hono!')
-})
 
 export default app
