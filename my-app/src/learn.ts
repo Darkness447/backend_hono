@@ -71,6 +71,19 @@ app.put("/video/:id", async (c) => {
 })
 
 
-// deelte
+// delete the video
+app.delete('/video/:id', (c) => {
+    const { id } = c.req.param()
+    videos = videos.filter((video) => video.id !== id)
+    return c.json({ message: "video deleted" })
+})
+
+// delete all video
+
+app.delete('/videos', (c) => {
+    videos = []
+    return c.json({ message: "deleted all videos" })
+})
+
 
 export default app

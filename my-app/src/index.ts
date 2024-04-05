@@ -1,6 +1,8 @@
 import { Hono } from 'hono'
-import app from './learn'
 
+const app = new Hono()
+
+app.get("")
 
 
 export default app
